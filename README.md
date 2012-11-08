@@ -18,7 +18,6 @@ To share image to Line, you can call:
 
 ```
 [Line shareImage:[UIImage named:@"avatar.png"]];
-
 ```
 
 Also, LineKit provides a helper method to check if Line is installed on current device.
