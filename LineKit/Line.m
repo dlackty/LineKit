@@ -24,6 +24,23 @@
 
 @implementation Line
 
+#pragma mark - Private
+
++ (BOOL)isiOS7 {
+  NSArray *versions = [[UIDevice currentDevice].systemVersion componentsSeparatedByString:@"."];
+  return [versions[0] intValue] >= 7;
+}
+
++ (UIPasteboard *)pasteboard {
+  if ([self isiOS7]) {
+    return [UIPasteboard generalPasteboard];
+  } else {
+    return [UIPasteboard pasteboardWithName:@"jp.naver.linecamera.pasteboard" create:YES];
+  }
+}
+
+#pragma mark - Public
+
 + (BOOL)isLineInstalled {
   return [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"line://"]];
 }
@@ -33,7 +50,7 @@
 }
 
 + (BOOL)shareImage:(UIImage *)image {
-  UIPasteboard *pasteboard = [UIPasteboard pasteboardWithName:@"jp.naver.linecamera.pasteboard" create:YES];
+  UIPasteboard *pasteboard = self.pasteboard;
   [pasteboard setData:UIImageJPEGRepresentation(image, 0.8) forPasteboardType:@"public.jpeg"];
   return [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"line://msg/image/%@", pasteboard.name]]];
 }
