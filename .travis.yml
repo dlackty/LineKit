@@ -1,0 +1,4 @@
+language: objective-c
+xcode_project: LKExample/LKExample.xcodeproj
+xcode_scheme: LKExample
+xcode_sdk: iphonesimulator
