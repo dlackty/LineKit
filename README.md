@@ -1,5 +1,7 @@
 # LineKit
 
+[![Build Status](https://travis-ci.org/dlackty/LineKit.svg?branch=master)](https://travis-ci.org/dlackty/LineKit)
+
 Share to Naver Line from your apps. 
 
 LineKit now support sharing text, and images friends, and groups. Sharing to timeline is also supported.
