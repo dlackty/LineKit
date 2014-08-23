@@ -53,6 +53,10 @@
   }
 }
 
+- (IBAction)openLineInAppStoreButtonClicked:(id)sender {
+  [Line openLineInAppStore];
+}
+
 #pragma mark - UIImagePickerControllerDelegate
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {

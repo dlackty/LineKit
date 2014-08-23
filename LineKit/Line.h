@@ -25,6 +25,7 @@
 @interface Line : NSObject
 
 + (BOOL)isLineInstalled;
++ (void)openLineInAppStore;
 
 + (BOOL)shareText:(NSString *)text;
 + (BOOL)shareImage:(UIImage *)image;

@@ -41,6 +41,10 @@
 
 #pragma mark - Public
 
++ (void)openLineInAppStore {
+  [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://itunes.apple.com/jp/app/line/id443904275?ls=1&mt=8"]];
+}
+
 + (BOOL)isLineInstalled {
   return [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"line://"]];
 }
