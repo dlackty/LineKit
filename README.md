@@ -6,6 +6,8 @@ Share to Naver Line from your apps.
 
 LineKit now support sharing text, and images friends, and groups. Sharing to timeline is also supported.
 
+Also, an UIActivity subclass is also provided for use with UIActivityController.
+
 Currently, LineKit supports Line version > 2.0, and should works on iOS > 4.0 with ARC-enabled.
 
 ## Usage
@@ -47,11 +49,17 @@ We recommend you to install via CocoaPods. However, if you want to install manua
 1. Download the latest codes from GitHub
 2. Add LineKit folder to your Xcode project.
 
+## Thanks
+
+Thanks [@bcylin](https://github.com/bcylin) for some part of codes for LKLineActivity.
+
+Thanks [@trisix](https://github.com/trisix) for LKLineActivity images.
+
 ## License
 
 LineKit is available under the MIT license.
 
-Copyright (C) 2012 Richard Lee
+Copyright (C) 2014 Richard Lee
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
