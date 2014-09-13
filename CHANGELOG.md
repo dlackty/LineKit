@@ -1,3 +1,7 @@
+## 1.3.0
+
+* Add LKLineActivity for UIActivityViewController
+
 ## 1.2.0
 
 * Open LINE in App Store

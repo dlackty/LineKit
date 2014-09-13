@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "LineKit"
-  s.version      = "1.2.0"
+  s.version      = "1.3.0"
   s.summary      = "Share to Naver Line from your apps."
   s.homepage     = "https://github.com/dlackty/LineKit"
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
@@ -10,6 +10,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '6.0'
 
   s.source_files = 'LineKit/*.{h,m}'
+  s.resources    = "LineKit/images/*.png"
 
   s.social_media_url = "https://twitter.com/dlackty"
   s.requires_arc = true
