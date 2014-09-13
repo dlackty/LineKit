@@ -26,13 +26,8 @@
 
 #pragma mark - Private
 
-+ (BOOL)isiOS7 {
-  NSArray *versions = [[UIDevice currentDevice].systemVersion componentsSeparatedByString:@"."];
-  return [versions[0] intValue] >= 7;
-}
-
 + (UIPasteboard *)pasteboard {
-  if ([self isiOS7]) {
+  if (NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_6_1) {
     return [UIPasteboard generalPasteboard];
   } else {
     return [UIPasteboard pasteboardWithName:@"jp.naver.linecamera.pasteboard" create:YES];
@@ -46,7 +41,7 @@
 }
 
 + (BOOL)isLineInstalled {
-  return [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"line://"]];
+  return YES;// [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"line://"]];
 }
 
 + (BOOL)shareText:(NSString *)text {
