@@ -1,6 +1,6 @@
-//  LKViewController.h
+// LKLineActivity.m
 //
-// Copyright (C) 2012 Chih-Wei Lee
+// Copyright (C) 2012-2014 Richard Lee
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -22,13 +22,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LKViewController : UIViewController <
-UINavigationControllerDelegate,
-UIImagePickerControllerDelegate>
-
-- (IBAction)shareTextButtonClicked:(id)sender;
-- (IBAction)shareImageButtonClicked:(id)sender;
-- (IBAction)shareTextViaActivityButtonClicked:(id)sender;
-- (IBAction)shareImageViaActivityButtonClicked:(id)sender;
+@interface LKLineActivity : UIActivity
 
 @end

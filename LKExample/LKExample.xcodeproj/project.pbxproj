@@ -19,6 +19,11 @@
 		E3074247164A552500AACDC2 /* LKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3074246164A552500AACDC2 /* LKViewController.m */; };
 		E307424A164A552500AACDC2 /* LKViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3074248164A552500AACDC2 /* LKViewController.xib */; };
 		E37BC657164A584C0009687E /* Line.m in Sources */ = {isa = PBXBuildFile; fileRef = E37BC656164A584C0009687E /* Line.m */; };
+		E3CEED6C19C4184600B3E818 /* LKActivity-Flat.png in Resources */ = {isa = PBXBuildFile; fileRef = E3CEED6819C4184600B3E818 /* LKActivity-Flat.png */; };
+		E3CEED6D19C4184600B3E818 /* LKActivity-Flat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E3CEED6919C4184600B3E818 /* LKActivity-Flat@2x.png */; };
+		E3CEED6E19C4184600B3E818 /* LKActivity.png in Resources */ = {isa = PBXBuildFile; fileRef = E3CEED6A19C4184600B3E818 /* LKActivity.png */; };
+		E3CEED6F19C4184600B3E818 /* LKActivity@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E3CEED6B19C4184600B3E818 /* LKActivity@2x.png */; };
+		E3FA940B19927EDC0096C90B /* LKLineActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = E3FA940A19927EDC0096C90B /* LKLineActivity.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +46,12 @@
 		E3074251164A552500AACDC2 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		E37BC655164A584C0009687E /* Line.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Line.h; sourceTree = "<group>"; };
 		E37BC656164A584C0009687E /* Line.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Line.m; sourceTree = "<group>"; };
+		E3CEED6819C4184600B3E818 /* LKActivity-Flat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LKActivity-Flat.png"; sourceTree = "<group>"; };
+		E3CEED6919C4184600B3E818 /* LKActivity-Flat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LKActivity-Flat@2x.png"; sourceTree = "<group>"; };
+		E3CEED6A19C4184600B3E818 /* LKActivity.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LKActivity.png; sourceTree = "<group>"; };
+		E3CEED6B19C4184600B3E818 /* LKActivity@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LKActivity@2x.png"; sourceTree = "<group>"; };
+		E3FA940919927EDC0096C90B /* LKLineActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKLineActivity.h; sourceTree = "<group>"; };
+		E3FA940A19927EDC0096C90B /* LKLineActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKLineActivity.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,11 +127,25 @@
 		E37BC653164A57020009687E /* LineKit */ = {
 			isa = PBXGroup;
 			children = (
+				E3CEED6719C4184600B3E818 /* images */,
 				E37BC655164A584C0009687E /* Line.h */,
 				E37BC656164A584C0009687E /* Line.m */,
+				E3FA940919927EDC0096C90B /* LKLineActivity.h */,
+				E3FA940A19927EDC0096C90B /* LKLineActivity.m */,
 			);
 			name = LineKit;
 			path = ../LineKit;
+			sourceTree = "<group>";
+		};
+		E3CEED6719C4184600B3E818 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				E3CEED6819C4184600B3E818 /* LKActivity-Flat.png */,
+				E3CEED6919C4184600B3E818 /* LKActivity-Flat@2x.png */,
+				E3CEED6A19C4184600B3E818 /* LKActivity.png */,
+				E3CEED6B19C4184600B3E818 /* LKActivity@2x.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,9 +200,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3CEED6D19C4184600B3E818 /* LKActivity-Flat@2x.png in Resources */,
 				E3074238164A552500AACDC2 /* InfoPlist.strings in Resources */,
 				E3074240164A552500AACDC2 /* Default.png in Resources */,
+				E3CEED6F19C4184600B3E818 /* LKActivity@2x.png in Resources */,
+				E3CEED6C19C4184600B3E818 /* LKActivity-Flat.png in Resources */,
 				E3074242164A552500AACDC2 /* Default@2x.png in Resources */,
+				E3CEED6E19C4184600B3E818 /* LKActivity.png in Resources */,
 				E3074244164A552500AACDC2 /* Default-568h@2x.png in Resources */,
 				E307424A164A552500AACDC2 /* LKViewController.xib in Resources */,
 			);
@@ -191,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E307423A164A552500AACDC2 /* main.m in Sources */,
+				E3FA940B19927EDC0096C90B /* LKLineActivity.m in Sources */,
 				E307423E164A552500AACDC2 /* LKAppDelegate.m in Sources */,
 				E3074247164A552500AACDC2 /* LKViewController.m in Sources */,
 				E37BC657164A584C0009687E /* Line.m in Sources */,

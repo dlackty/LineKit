@@ -22,10 +22,25 @@
 
 #import "LKViewController.h"
 #import "Line.h"
+#import "LKLineActivity.h"
+
+typedef NS_ENUM(NSInteger, LKLineActivityImageSharingType) {
+  LKLineActivityImageSharingDirectType,
+  LKLineActivityImageSharingActivityType
+};
+
+@interface LKViewController ()
+@property (nonatomic, assign) LKLineActivityImageSharingType imageSharingType;
+@end
 
 @implementation LKViewController
 
 #pragma mark - Private
+
+- (void)presentActivityViewControllerWithItems:(NSArray *)items {
+  UIActivityViewController *controller = [[UIActivityViewController alloc] initWithActivityItems:items applicationActivities:@[[[LKLineActivity alloc] init]]];
+  [self presentViewController:controller animated:YES completion:nil];
+}
 
 - (BOOL)checkIfLineInstalled {
   BOOL isInstalled = [Line isLineInstalled];
@@ -49,20 +64,41 @@
   if ([self checkIfLineInstalled]) {
     UIImagePickerController *controller = [[UIImagePickerController alloc] init];
     controller.delegate = self;
-    [self presentViewController:controller animated:YES completion:NULL];
+    self.imageSharingType = LKLineActivityImageSharingDirectType;
+    [self presentViewController:controller animated:YES completion:nil];
   }
 }
 
+
 - (IBAction)openLineInAppStoreButtonClicked:(id)sender {
   [Line openLineInAppStore];
+}
+
+- (IBAction)shareTextViaActivityButtonClicked:(id)sender {
+  [self presentActivityViewControllerWithItems:@[@"Hello Line!", [NSURL URLWithString:@"http://line.me/"]]];
+}
+
+- (IBAction)shareImageViaActivityButtonClicked:(id)sender {
+  UIImagePickerController *controller = [[UIImagePickerController alloc] init];
+  controller.delegate = self;
+  self.imageSharingType = LKLineActivityImageSharingActivityType;
+  [self presentViewController:controller animated:YES completion:nil];
 }
 
 #pragma mark - UIImagePickerControllerDelegate
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
   UIImage *image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
-  [Line shareImage:image];
-  [self dismissViewControllerAnimated:YES completion:NULL];
+  [self dismissViewControllerAnimated:YES completion:^{
+    switch (self.imageSharingType) {
+      case LKLineActivityImageSharingActivityType:
+        [self presentActivityViewControllerWithItems:@[image]];
+        break;
+      case LKLineActivityImageSharingDirectType:
+        [Line shareImage:image];
+        break;
+    }
+  }];
 }
 
 @end
