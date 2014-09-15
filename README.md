@@ -32,6 +32,22 @@ To share image to Line, you can call:
 [Line shareImage:[UIImage named:@"avatar.png"]];
 ```
 
+You can redirect user to App Store to download Line app via:
+
+```ObjC
+[Line openLineInAppStore];
+```
+
+### UIActivity
+
+To use LineKit with UIActivityViewController is simple and recommended:
+
+```ObjC
+UIActivityViewController *controller = 
+  [[UIActivityViewController alloc] initWithActivityItems:items
+                                    applicationActivities:@[[[LKLineActivity alloc] init]]];
+```
+
 ### iOS 7 
 
 Due to iOS 7 limitation, custom `UIPasteboard` objects couldn't be shared across apps without the same namespace (i.e. `jp.naver.*`)
@@ -40,7 +56,7 @@ So for iOS 7, general `UIPasteboard` object is used for image sharing. Be carefu
 
 ## Sample Project
 
-The Xcode project under LKExample folder is a sample app to demonstrate the basic usages of LineKit.
+The Xcode project under LKExample folder is a sample app to demonstrate the usages of LineKit.
 
 ## Installation
 
