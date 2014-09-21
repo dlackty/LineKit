@@ -41,7 +41,7 @@
 }
 
 + (BOOL)isLineInstalled {
-  return YES;// [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"line://"]];
+  return [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"line://"]];
 }
 
 + (BOOL)shareText:(NSString *)text {
