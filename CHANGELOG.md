@@ -1,3 +1,8 @@
+## 1.3.1
+
+* Fix app installation detection
+* Use default UIActivityCategoryAction for current icon images on iOS 8
+
 ## 1.3.0
 
 * Add LKLineActivity for UIActivityViewController
