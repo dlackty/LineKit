@@ -32,6 +32,18 @@ To share image to Line, you can call:
 [Line shareImage:[UIImage named:@"avatar.png"]];
 ```
 
+To add friend or official account, use:
+
+```ObjC
+[Line addFriend:@"hPtAUZX6w5"];
+```
+
+To show shop detail (usually stickers), try:
+
+```ObjC
+[Line showShopDetail:@"2"];
+```
+
 You can redirect user to App Store to download Line app via:
 
 ```ObjC
