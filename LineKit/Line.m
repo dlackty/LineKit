@@ -54,4 +54,12 @@
   return [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"line://msg/image/%@", pasteboard.name]]];
 }
 
++ (void)addFriend:(NSString *)identifier {
+  [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"line://ti/p/%@", identifier]]];
+}
+
++ (void)showShopDetail:(NSString *)identifier {
+  [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"line://shop/detail/%@", identifier]]];
+}
+
 @end
