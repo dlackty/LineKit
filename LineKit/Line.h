@@ -30,4 +30,7 @@
 + (BOOL)shareText:(NSString *)text;
 + (BOOL)shareImage:(UIImage *)image;
 
++ (void)addFriend:(NSString *)identifier;
++ (void)showShopDetail:(NSString *)identifier;
+
 @end
