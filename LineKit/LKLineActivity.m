@@ -33,10 +33,6 @@
 
 #pragma mark - UIActivity
 
-+ (UIActivityCategory)activityCategory {
-  return UIActivityCategoryShare;
-}
-
 - (NSString *)activityType {
   return @"org.dlackty.LKLineActivity";
 }
