@@ -30,5 +30,7 @@ UIImagePickerControllerDelegate>
 - (IBAction)shareImageButtonClicked:(id)sender;
 - (IBAction)shareTextViaActivityButtonClicked:(id)sender;
 - (IBAction)shareImageViaActivityButtonClicked:(id)sender;
+- (IBAction)addFriendButtonClicked:(id)sender;
+- (IBAction)showShopDetailButtonClicked:(id)sender;
 
 @end

@@ -85,6 +85,14 @@ typedef NS_ENUM(NSInteger, LKLineActivityImageSharingType) {
   [self presentViewController:controller animated:YES completion:nil];
 }
 
+- (IBAction)addFriendButtonClicked:(id)sender {
+  [Line addFriend:@"hPtAUZX6w5"];
+}
+
+- (IBAction)showShopDetailButtonClicked:(id)sender {
+  [Line showShopDetail:@"2"];
+}
+
 #pragma mark - UIImagePickerControllerDelegate
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {

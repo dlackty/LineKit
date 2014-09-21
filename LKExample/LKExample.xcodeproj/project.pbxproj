@@ -177,6 +177,11 @@
 				CLASSPREFIX = LK;
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Polydice, Inc.";
+				TargetAttributes = {
+					E3074228164A552500AACDC2 = {
+						DevelopmentTeam = U27B56TU48;
+					};
+				};
 			};
 			buildConfigurationList = E3074223164A552500AACDC2 /* Build configuration list for PBXProject "LKExample" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -302,10 +307,13 @@
 		E3074263164A552500AACDC2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LKExample/LKExample-Prefix.pch";
 				INFOPLIST_FILE = "LKExample/LKExample-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -313,10 +321,13 @@
 		E3074264164A552500AACDC2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LKExample/LKExample-Prefix.pch";
 				INFOPLIST_FILE = "LKExample/LKExample-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
