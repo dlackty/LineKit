@@ -1,3 +1,7 @@
+## 1.4.0
+
+* Add add friend and show shop detail helpers
+
 ## 1.3.1
 
 * Fix app installation detection

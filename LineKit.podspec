@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "LineKit"
-  s.version      = "1.3.1"
+  s.version      = "1.4.0"
   s.summary      = "Share to Naver Line from your apps."
   s.homepage     = "https://github.com/dlackty/LineKit"
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
