@@ -1,3 +1,7 @@
+## 1.4.1
+
+* Ignore unsupported activity items
+
 ## 1.4.0
 
 * Add add friend and show shop detail helpers
