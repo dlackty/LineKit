@@ -50,18 +50,20 @@
 }
 
 - (BOOL)canPerformWithActivityItems:(NSArray *)activityItems {
+  if (![Line isLineInstalled]) {
+    return NO;
+  }
+
   for (id item in activityItems) {
     if ([item isKindOfClass:[UIImage class]]) {
       self.isImageSharing = YES;
     } else if ([item isKindOfClass:[NSURL class]] ||
-        [item isKindOfClass:[NSString class]]) {
+               [item isKindOfClass:[NSString class]]) {
       self.isTextSharing = YES;
-    } else {
-      return NO;
     }
   }
-  
-  return (self.isImageSharing ^ self.isTextSharing) && [Line isLineInstalled];
+
+  return (self.isImageSharing ^ self.isTextSharing);
 }
 
 - (void)prepareWithActivityItems:(NSArray *)activityItems {
