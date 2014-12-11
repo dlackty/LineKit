@@ -67,7 +67,25 @@
 }
 
 - (void)prepareWithActivityItems:(NSArray *)activityItems {
-  self.items = activityItems;
+  BOOL (^filter)(id);
+
+  if (self.isImageSharing) {
+    filter = ^BOOL(id item) {
+      return [item isKindOfClass:[UIImage class]];
+    };
+  } else if (self.isTextSharing) {
+    filter = ^BOOL(id item) {
+      return [item isKindOfClass:[NSURL class]] || [item isKindOfClass:[NSString class]];
+    };
+  }
+
+  if (!filter) {
+    return;
+  }
+
+  self.items = [activityItems objectsAtIndexes:[activityItems indexesOfObjectsPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
+    return filter(obj);
+  }]];
 }
 
 - (void)performActivity {
