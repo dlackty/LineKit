@@ -1,5 +1,3 @@
 language: objective-c
 osx_image: xcode10
-xcode_project: LKExample/LKExample.xcodeproj
-xcode_scheme: LKExample
-xcode_sdk: iphonesimulator
+script: set -o pipefail && xcodebuild -project LKExample/LKExample.xcodeproj -scheme LKExample -sdk iphonesimulator build | xcpretty
