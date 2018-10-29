@@ -2,13 +2,11 @@
 
 [![Build Status](https://travis-ci.org/dlackty/LineKit.svg?branch=master)](https://travis-ci.org/dlackty/LineKit)
 
-Share to Naver Line from your apps. 
+Share to LINE from your apps.
 
 LineKit now support sharing text, and images friends, and groups. Sharing to timeline is also supported.
 
-Also, an UIActivity subclass is also provided for use with UIActivityController.
-
-Currently, LineKit supports Line version > 2.0, and should works on iOS > 4.0 with ARC-enabled.
+Also, an `UIActivity` subclass is also provided for use with `UIActivityController`.
 
 ## Usage
 
@@ -60,7 +58,7 @@ UIActivityViewController *controller =
                                     applicationActivities:@[[[LKLineActivity alloc] init]]];
 ```
 
-### iOS 7 
+### iOS 7's limitation for image sharing
 
 Due to iOS 7 limitation, custom `UIPasteboard` objects couldn't be shared across apps without the same namespace (i.e. `jp.naver.*`)
 
@@ -72,16 +70,20 @@ The Xcode project under LKExample folder is a sample app to demonstrate the usag
 
 ## Installation
 
-We recommend you to install via CocoaPods. However, if you want to install manually, you can follow the instructions below.
-
-1. Download the latest codes from GitHub
-2. Add LineKit folder to your Xcode project.
+We recommend you to install via CocoaPods.
 
 ## Thanks
 
 Thanks [@bcylin](https://github.com/bcylin) for some part of codes for LKLineActivity.
 
 Thanks [@trisix](https://github.com/trisix) for LKLineActivity images.
+
+## Users
+
+* [iCook 愛料理](https://icook.tw/)
+* [kurashiru [クラシル]](https://www.kurashiru.com/)
+
+Feel free to open a pull request or send a issue to let me know!
 
 ## License
 
