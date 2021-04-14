@@ -10,7 +10,7 @@ Also, an `UIActivity` subclass is also provided for use with `UIActivityControll
 
 ## Usage
 
-LineKit provides a helper method to check if Line is installed on current device.
+LineKit provides a helper method to check if LINE app is installed on current device.
 
 ```ObjC
 if (![Line isLineInstalled]) {
@@ -18,13 +18,13 @@ if (![Line isLineInstalled]) {
 }
 ```
 
-To share text to Line, you can simply call:
+To share text to LINE, you can simply call:
 
 ```ObjC
 [Line shareText:@"Hello Line!"];
 ```
 
-To share image to Line, you can call: 
+To share image to LINE, you can call:
 
 ```ObjC
 [Line shareImage:[UIImage named:@"avatar.png"]];
@@ -42,11 +42,17 @@ To show shop detail (usually stickers), try:
 [Line showShopDetail:@"2"];
 ```
 
-You can redirect user to App Store to download Line app via:
+You can redirect user to App Store to download LINE app via:
 
 ```ObjC
 [Line openLineInAppStore];
 ```
+
+### Add `line://` to `LSApplicationQueriesSchemes`
+
+For LineKit to properly detect LINE's installation, please add `line://` to `LSApplicationQueriesSchemes`.
+
+After iOS 9.0, you must declare the URL schemes you pass to this method by adding the [`LSApplicationQueriesSchemes`](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/LaunchServicesKeys.html#//apple_ref/doc/plist/info/LSApplicationQueriesSchemes) key to your app's Info.plist file. 
 
 ### UIActivity
 
