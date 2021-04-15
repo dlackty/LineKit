@@ -45,7 +45,13 @@
 }
 
 + (BOOL)shareText:(NSString *)text {
-  return [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"line://msg/text/%@", [text stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]]];
+#ifdef __IPHONE_9_0
+    NSMutableCharacterSet *allowedCharacterSet = [NSMutableCharacterSet alphanumericCharacterSet];
+    [allowedCharacterSet addCharactersInString:@"-._~"];
+    return [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"line://msg/text/%@", [text stringByAddingPercentEncodingWithAllowedCharacters:allowedCharacterSet]]]];
+#else
+    return [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"line://msg/text/%@", [text stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]]];
+#endif
 }
 
 + (BOOL)shareImage:(UIImage *)image {
